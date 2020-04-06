@@ -30,7 +30,6 @@ class App extends Component {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundAttachment: 'fixed',
           }}
         >
           {() => (
@@ -41,7 +40,7 @@ class App extends Component {
             </div>
           )}
         </WaterWave>
-        <div style={{height:'100vh'}}></div>
+        <div style={{ height: '100vh' }}></div>
       </div>
     );
   }
