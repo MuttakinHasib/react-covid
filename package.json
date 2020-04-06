@@ -1,17 +1,32 @@
 {
-  "name": "seasons",
+  "homepage": "https://muttakinhasib.github.io/react-covid",
+  "name": "covid-react-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.1.1",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.28",
+    "novelcovid": "^1.1.4",
     "react": "^16.13.1",
+    "react-animejs": "^0.5.4",
+    "react-chartjs-2": "^2.9.0",
+    "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-moment": "^0.9.7",
+    "react-odometerjs": "^2.1.1",
+    "react-scripts": "3.4.1",
+    "react-water-wave": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -30,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
