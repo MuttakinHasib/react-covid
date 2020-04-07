@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "antd": "^4.1.1",
     "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.28",
@@ -20,6 +21,7 @@
     "react-dom": "^16.13.1",
     "react-moment": "^0.9.7",
     "react-odometerjs": "^2.1.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-water-wave": "^1.0.5"
   },

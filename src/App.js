@@ -1,46 +1,40 @@
 import React, { Component } from 'react';
 import './index.css';
 import './App.module.css';
-import { Cards, Charts, CountryPicker } from './components';
-import { fetchDate } from './api';
-import WaterWave from 'react-water-wave';
-import img from './images/slider-bg.jpg';
+import { Navbar, Cards, Charts, CountryPicker } from './components';
+import { fetchDate, fetchLocalCountry } from './api';
+import Footer from './components/Footer';
 class App extends Component {
-  state = { data: {} };
+  state = { data: {}, localData: {}, country: '', flag: '' };
 
   async componentDidMount() {
-    const data = await fetchDate();
-    this.setState({ data });
+    try {
+      const data = await fetchDate();
+      const localData = await fetchLocalCountry();
+      this.setState({ data, localData });
+    } catch (err) {
+      console.log(err);
+    }
   }
+  handleCountryChange = async country => {
+    const localData = await fetchLocalCountry(country);
+    // console.log(localData);
+    this.setState({ localData });
+  };
   render() {
-    const { data } = this.state;
+    const { data, localData } = this.state;
     return (
       <div>
-        <WaterWave
-          imageUrl={img}
-          resolution={300}
-          dropRadius={30}
-          perturbance={0.01}
-          style={{
-            height: '100vh',
-            width: '100%',
-            backgroundPosition: 'center',
-            backgroundColor: 'rgba(0,0,0,.1)',
-            backgroundSize: 'cover',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          {() => (
-            <div className='container'>
-              <Cards data={data} />
-              <CountryPicker />
-              <Charts />
-            </div>
-          )}
-        </WaterWave>
-        <div style={{ height: '100vh' }}></div>
+        <Navbar />
+        <Cards data={data} />
+        <div className='container'>
+          <CountryPicker
+            localData={localData}
+            handleCountryChange={this.handleCountryChange}
+          />
+          <Charts />
+          <Footer />
+        </div>
       </div>
     );
   }

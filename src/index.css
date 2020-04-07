@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 body {
   font-family: 'Ubuntu', sans-serif;
   /* background: rgb(250, 250, 250); */
@@ -5,28 +7,92 @@ body {
 
 .cases {
   /* background-color: transparent; */
-  /* border: 8px solid #f36 !important; */
-  /* color: red; */
+  border: 8px solid #1A1053 !important;
 }
-.global span{
-  font-size: 25px;
+
+.deaths {
+  /* background-color: transparent; */
+  border: 8px solid #f36 !important;
 }
-.global{
+
+.recovered {
+  /* background-color: transparent; */
+  border: 8px solid #1dd1a1 !important;
+}
+
+.local .cases {
+  /* background-color: transparent; */
+  border: 10px double #1A1053 !important;
+}
+
+.local .deaths {
+  /* background-color: transparent; */
+  border: 10px double #f36 !important;
+}
+
+.local .recovered {
+  /* background-color: transparent; */
+  border: 10px double #1dd1a1 !important;
+}
+
+.global p,
+.local p {
+  font-size: 18px;
+}
+
+/* .global{
   color: #fff;
-}
+} */
 .cases,
 .deaths,
 .recovered {
-  background-color: #fff;
+  /* background-color: #fff; */
+  padding: 15px;
 }
-/* 
-.cases::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 0;
-  background: url('./images/cases.png');
-  width: 150px;
-  height: 150px;
+
+.heart {
+  color: #f36;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  .clock {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.icon i {
+  font-size: 30px;
+}
+
+.icon.github i {
+  color: #24292E;
+}
+
+.logo {
+  transform: rotate(0deg);
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.landing {
+  background: url('./images/land.png');
+  background-position: center;
   background-repeat: no-repeat;
-} */
+}
