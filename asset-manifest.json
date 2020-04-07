@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.css": "/react-covid/static/css/main.4c6556fb.chunk.css",
-    "main.js": "/react-covid/static/js/main.10753d4f.chunk.js",
-    "main.js.map": "/react-covid/static/js/main.10753d4f.chunk.js.map",
+    "main.css": "/react-covid/static/css/main.68e66fd3.chunk.css",
+    "main.js": "/react-covid/static/js/main.76771e49.chunk.js",
+    "main.js.map": "/react-covid/static/js/main.76771e49.chunk.js.map",
     "runtime-main.js": "/react-covid/static/js/runtime-main.9d9a57c7.js",
     "runtime-main.js.map": "/react-covid/static/js/runtime-main.9d9a57c7.js.map",
-    "static/js/2.c174353d.chunk.js": "/react-covid/static/js/2.c174353d.chunk.js",
-    "static/js/2.c174353d.chunk.js.map": "/react-covid/static/js/2.c174353d.chunk.js.map",
+    "static/css/2.d788185a.chunk.css": "/react-covid/static/css/2.d788185a.chunk.css",
+    "static/js/2.7fd801b9.chunk.js": "/react-covid/static/js/2.7fd801b9.chunk.js",
+    "static/js/2.7fd801b9.chunk.js.map": "/react-covid/static/js/2.7fd801b9.chunk.js.map",
     "index.html": "/react-covid/index.html",
-    "precache-manifest.b958f1fc72a6440c8bf24d8963be7fe1.js": "/react-covid/precache-manifest.b958f1fc72a6440c8bf24d8963be7fe1.js",
+    "precache-manifest.71a5c597999bebef80ef28ec668eb3bc.js": "/react-covid/precache-manifest.71a5c597999bebef80ef28ec668eb3bc.js",
     "service-worker.js": "/react-covid/service-worker.js",
-    "static/css/main.4c6556fb.chunk.css.map": "/react-covid/static/css/main.4c6556fb.chunk.css.map",
-    "static/js/2.c174353d.chunk.js.LICENSE.txt": "/react-covid/static/js/2.c174353d.chunk.js.LICENSE.txt",
+    "static/css/2.d788185a.chunk.css.map": "/react-covid/static/css/2.d788185a.chunk.css.map",
+    "static/css/main.68e66fd3.chunk.css.map": "/react-covid/static/css/main.68e66fd3.chunk.css.map",
+    "static/js/2.7fd801b9.chunk.js.LICENSE.txt": "/react-covid/static/js/2.7fd801b9.chunk.js.LICENSE.txt",
     "static/media/cases.png": "/react-covid/static/media/cases.feea5fb1.png",
-    "static/media/corona-girl.png": "/react-covid/static/media/corona-girl.33c951b0.png",
     "static/media/deaths-large.png": "/react-covid/static/media/deaths-large.b379f9d1.png",
-    "static/media/recovered.png": "/react-covid/static/media/recovered.66525ad4.png",
-    "static/media/slider-bg.jpg": "/react-covid/static/media/slider-bg.1c51cebe.jpg"
+    "static/media/index.css": "/react-covid/static/media/land.dd8ede4e.png",
+    "static/media/recovered.png": "/react-covid/static/media/recovered.66525ad4.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9d9a57c7.js",
-    "static/js/2.c174353d.chunk.js",
-    "static/css/main.4c6556fb.chunk.css",
-    "static/js/main.10753d4f.chunk.js"
+    "static/css/2.d788185a.chunk.css",
+    "static/js/2.7fd801b9.chunk.js",
+    "static/css/main.68e66fd3.chunk.css",
+    "static/js/main.76771e49.chunk.js"
   ]
 }
