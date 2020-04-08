@@ -7,7 +7,6 @@ import deathsImg from '../../images/deaths-large.png';
 import recoveredImg from '../../images/recovered.png';
 const { Option } = Select;
 
-
 const CountryPicker = ({ handleCountryChange, localData }) => {
   const [fetchedCountryData, setFetchedCountryData] = useState([]);
   useEffect(() => {
@@ -26,7 +25,7 @@ const CountryPicker = ({ handleCountryChange, localData }) => {
         <div className='my-3 d-flex align-items-center'>
           <h4 className='mb-0'>
             {localData?.country ? (
-              localData?.country
+              localData.country
             ) : (
               <small className='text-primary'>Loading . . .</small>
             )}
@@ -35,9 +34,9 @@ const CountryPicker = ({ handleCountryChange, localData }) => {
           <div>
             {localData?.flag ? (
               <img
-                src={localData?.flag}
+                src={localData.flag}
                 style={{ width: '35px' }}
-                alt={localData?.country}
+                alt={localData.country}
               />
             ) : null}
           </div>
@@ -73,10 +72,10 @@ const CountryPicker = ({ handleCountryChange, localData }) => {
             </div>
             <div className='col-8'>
               <h2 className='text-info'>
-                {localData?.cases ? (
+                {localData?.cases >= 0 ? (
                   <CountUp
                     start={0}
-                    end={localData?.cases}
+                    end={localData.cases}
                     duration={2.3}
                     separator={','}
                   />
@@ -95,10 +94,10 @@ const CountryPicker = ({ handleCountryChange, localData }) => {
             </div>
             <div className='col-8'>
               <h2 className='text-danger'>
-                {localData?.deaths ? (
+                {localData?.deaths >= 0 ? (
                   <CountUp
                     start={0}
-                    end={localData?.deaths}
+                    end={localData.deaths}
                     duration={2.3}
                     separator={','}
                   />
@@ -121,10 +120,10 @@ const CountryPicker = ({ handleCountryChange, localData }) => {
             </div>
             <div className='col-8'>
               <h2 className='text-success'>
-                {localData?.recovered ? (
+                {localData?.recovered >= 0 ? (
                   <CountUp
                     start={0}
-                    end={localData?.recovered}
+                    end={localData.recovered}
                     duration={2.3}
                     separator={','}
                   />
@@ -148,10 +147,10 @@ const CountryPicker = ({ handleCountryChange, localData }) => {
             </div>
             <div className='col-8'>
               <h2 className='text-info'>
-                {localData?.todayCases ? (
+                {localData?.todayCases >= 0 ? (
                   <CountUp
                     start={0}
-                    end={localData?.todayCases}
+                    end={localData.todayCases}
                     duration={2.3}
                     separator={','}
                   />
@@ -170,10 +169,10 @@ const CountryPicker = ({ handleCountryChange, localData }) => {
             </div>
             <div className='col-8'>
               <h2 className='text-danger'>
-                {localData?.todayDeaths ? (
+                {localData?.todayDeaths >= 0 ? (
                   <CountUp
                     start={0}
-                    end={localData?.todayDeaths}
+                    end={localData.todayDeaths}
                     duration={2.3}
                     separator={','}
                   />
@@ -196,10 +195,10 @@ const CountryPicker = ({ handleCountryChange, localData }) => {
             </div>
             <div className='col-8'>
               <h2 className='text-warning'>
-                {localData?.critical ? (
+                {localData?.critical >= 0 ? (
                   <CountUp
                     start={0}
-                    end={localData?.critical}
+                    end={localData.critical}
                     duration={2.3}
                     separator={','}
                   />
