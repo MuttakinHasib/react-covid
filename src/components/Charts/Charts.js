@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchDaily } from '../../api';
 import { Line } from 'react-chartjs-2';
+import Spinner from '../Spinner';
 
 const Charts = () => {
   const [dailyData, setDailyData] = useState([]);
@@ -8,6 +9,13 @@ const Charts = () => {
     const fetchAPI = async () => setDailyData(await fetchDaily());
     fetchAPI();
   }, []);
+
+  if (!dailyData?.length)
+    return (
+      <div className='text-center'>
+        <Spinner />
+      </div>
+    );
 
   const lineChart = dailyData?.length ? (
     <Line
