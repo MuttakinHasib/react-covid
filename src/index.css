@@ -35,6 +35,20 @@ body {
   border: 10px double #1dd1a1 !important;
 }
 
+.critical {
+  /* background-color: transparent; */
+  border: 8px solid #ff3838 !important;
+  border-radius: 5px;
+}
+
+.font-bd {
+  font-family: 'SolaimanLipi', sans-serif;
+}
+
+.font-en {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .global p,
 .local p {
   font-size: 18px;
@@ -45,7 +59,8 @@ body {
 } */
 .cases,
 .deaths,
-.recovered {
+.recovered,
+.critical {
   /* background-color: #fff; */
   padding: 15px;
 }
@@ -95,4 +110,14 @@ body {
   background: url('./images/land.png');
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 400px) {
+  .fb {
+    display: none;
+  }
+
+  .landing {
+    background-size: contain;
+  }
 }

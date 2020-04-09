@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './index.css';
-import './App.module.css';
-import { Navbar, Cards, Charts, CountryPicker } from './components';
+import {
+  Navbar,
+  Cards,
+  CardsBD,
+  Charts,
+  CountryPicker,
+  CountryPickerBD,
+} from './components';
 import { fetchDate, fetchLocalCountry } from './api';
 import Footer from './components/Footer';
 class App extends Component {
-  state = { data: {}, localData: {}, country: '', flag: '' };
+  state = { data: {}, localData: {}, country: 'Bangladesh' };
 
   async componentDidMount() {
     try {
@@ -16,26 +23,63 @@ class App extends Component {
       console.log(err);
     }
   }
-  handleCountryChange = async country => {
-    const localData = await fetchLocalCountry(country);
-    // console.log(localData);
-    this.setState({ localData });
+  handleCountryChange = async countryName => {
+    const localData = await fetchLocalCountry(countryName);
+    const { country } = localData;
+    this.setState({ localData, country });
   };
   render() {
-    const { data, localData } = this.state;
+    const { data, localData, country } = this.state;
     return (
-      <div>
-        <Navbar />
-        <Cards data={data} />
-        <div className='container'>
-          <CountryPicker
-            localData={localData}
-            handleCountryChange={this.handleCountryChange}
-          />
-          <Charts />
+      <Router>
+        <div>
+          <Switch>
+            <Route
+              exact
+              path='/'
+              render={props => (
+                <Fragment>
+                  <Navbar link='/en' nav='English' />
+                  <CardsBD data={data} />
+                  <div className='container'>
+                    <CountryPickerBD
+                      country={country}
+                      localData={localData}
+                      handleCountryChange={this.handleCountryChange}
+                    />
+                    <Charts font='font-bd' msg='গত 30 দিনের তথ্য' />
+                  </div>
+                  <Footer font='font-bd' msg='ডেভেলপ করেছে' name='হাসিব' />
+                </Fragment>
+              )}
+            />
+            <Route
+              exact
+              path='/en'
+              render={props => (
+                <Fragment>
+                  <Navbar link='/' nav='Bangla' />
+                  <Cards data={data} />
+                  <div className='container'>
+                    <CountryPicker
+                      country={country}
+                      localData={localData}
+                      handleCountryChange={this.handleCountryChange}
+                    />
+                    <Charts font='font-en' msg={`Last 30 day's information`} />
+                  </div>
+                  <Footer
+                    font='font-en'
+                    msg='Designed & Developed'
+                    by='by'
+                    name='Hasib'
+                  />
+                </Fragment>
+              )}
+            />
+          </Switch>
         </div>
-        <Footer />
-      </div>
+      </Router>
     );
   }
 }

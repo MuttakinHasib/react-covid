@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchDaily } from '../../api';
 import Chart from 'react-apexcharts';
 import Spinner from '../Spinner';
-const Charts = () => {
+const Charts = ({ msg, font }) => {
   const [dailyData, setDailyData] = useState([]);
   useEffect(() => {
     const fetchAPI = async () => setDailyData(await fetchDaily());
@@ -54,7 +54,7 @@ const Charts = () => {
 
   return (
     <div className='mt-5'>
-      <h4 className='text-secondary'>Coronavirus around the world - last 30 days :</h4>
+      <h4 className={`${font} text-secondary`}>{msg} &#8594;</h4>
       <div>{lineChart}</div>
     </div>
   );
