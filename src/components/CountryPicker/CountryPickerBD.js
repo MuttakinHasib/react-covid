@@ -42,7 +42,7 @@ const CountryPicker = ({ handleCountryChange, localData, country }) => {
               <img
                 src={localData.flag}
                 style={{ width: '35px' }}
-                alt={localData.country}
+                alt='&nbsp;'
               />
             ) : null}
           </div>
@@ -74,7 +74,7 @@ const CountryPicker = ({ handleCountryChange, localData, country }) => {
         <div className='col-md-4 my-3'>
           <div className='row cases shadow align-items-center justify-content-between no-gutters'>
             <div className='col-3'>
-              <img src={casesImg} alt='Cases' className='img-fluid logo' />
+              <img src={casesImg} alt='&nbsp;' className='img-fluid logo' />
             </div>
             <div className='col-8'>
               <h2 className='text-info'>
@@ -102,7 +102,7 @@ const CountryPicker = ({ handleCountryChange, localData, country }) => {
         <div className='col-md-4 my-3'>
           <div className='row deaths shadow align-items-center justify-content-between no-gutters'>
             <div className='col-3'>
-              <img src={deathsImg} alt='Deaths' className='img-fluid logo' />
+              <img src={deathsImg} alt='&nbsp;' className='img-fluid logo' />
             </div>
             <div className='col-8'>
               <h2 className='text-danger'>
@@ -130,11 +130,7 @@ const CountryPicker = ({ handleCountryChange, localData, country }) => {
         <div className='col-md-4 my-3'>
           <div className='row recovered shadow align-items-center justify-content-between no-gutters'>
             <div className='col-3'>
-              <img
-                src={recoveredImg}
-                alt='Recovered'
-                className='img-fluid logo'
-              />
+              <img src={recoveredImg} alt='&nbsp;' className='img-fluid logo' />
             </div>
             <div className='col-8'>
               <h2 className='text-success'>
@@ -167,7 +163,7 @@ const CountryPicker = ({ handleCountryChange, localData, country }) => {
         <div className='col-md-4 my-3'>
           <div className='row cases shadow align-items-center justify-content-between no-gutters'>
             <div className='col-3'>
-              <img src={casesImg} alt='Cases' className='img-fluid logo' />
+              <img src={casesImg} alt='&nbsp;' className='img-fluid logo' />
             </div>
             <div className='col-8'>
               <h2 className='text-info'>
@@ -195,7 +191,7 @@ const CountryPicker = ({ handleCountryChange, localData, country }) => {
         <div className='col-md-4 my-3'>
           <div className='row deaths shadow align-items-center justify-content-between no-gutters'>
             <div className='col-3'>
-              <img src={deathsImg} alt='Deaths' className='img-fluid logo' />
+              <img src={deathsImg} alt='&nbsp;' className='img-fluid logo' />
             </div>
             <div className='col-8'>
               <h2 className='text-danger'>
@@ -223,11 +219,7 @@ const CountryPicker = ({ handleCountryChange, localData, country }) => {
         <div className='col-md-4 my-3'>
           <div className='row critical shadow align-items-center justify-content-between no-gutters'>
             <div className='col-3'>
-              <img
-                src={recoveredImg}
-                alt='Recovered'
-                className='img-fluid logo'
-              />
+              <img src={recoveredImg} alt='&nbsp;' className='img-fluid logo' />
             </div>
             <div className='col-8'>
               <h2 className='text-warning'>
@@ -248,7 +240,7 @@ const CountryPicker = ({ handleCountryChange, localData, country }) => {
                   </small>
                 )}
               </h2>
-              <h4 className='text-muted'>গুরুতর অবস্থায়</h4>
+              <h4 className='text-muted'>গুরুতর অবস্থা</h4>
             </div>
           </div>
         </div>
