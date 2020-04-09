@@ -33,8 +33,8 @@ class App extends Component {
             handleCountryChange={this.handleCountryChange}
           />
           <Charts />
-          <Footer />
         </div>
+        <Footer />
       </div>
     );
   }
