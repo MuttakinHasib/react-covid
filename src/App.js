@@ -47,7 +47,7 @@ class App extends Component {
                       localData={localData}
                       handleCountryChange={this.handleCountryChange}
                     />
-                    <Charts font='font-bd' msg='গত 30 দিনের তথ্য' />
+                    <Charts font='font-bd' msg='গত ৩০ দিনের তথ্য' />
                   </div>
                   <Footer font='font-bd' msg='ডেভেলপ করেছে' name='হাসিব' />
                 </Fragment>
