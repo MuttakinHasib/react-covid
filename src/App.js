@@ -68,12 +68,7 @@ class App extends Component {
                     />
                     <Charts font='font-en' msg={`Last 30 day's information`} />
                   </div>
-                  <Footer
-                    font='font-en'
-                    msg='Designed & Developed'
-                    by='by'
-                    name='Hasib'
-                  />
+                  <Footer font='font-en' msg='Developed' by='by' name='Hasib' />
                 </Fragment>
               )}
             />
