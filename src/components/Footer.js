@@ -4,7 +4,7 @@ const Footer = ({ msg, font, name, by }) => {
     <footer className={`${font} border-top`}>
       <div className='container'>
         <p className='lead text-center mb-0 p-4'>
-          {msg} <i className='fas heart fa-heart mx-2'></i> {by}{' '}
+          {msg} {by} <i className='fas heart fa-heart mx-2'></i>{' '}
           <a
             className='text-primary font-weight-bold'
             href='https://facebook.com/hasibmolla28/'
