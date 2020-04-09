@@ -60,7 +60,7 @@ const Charts = () => {
     />
   ) : null;
 
-  return <div className='my-5'>{lineChart}</div>;
+  return <div className='mt-5'>{lineChart}</div>;
 };
 
 export default Charts;
