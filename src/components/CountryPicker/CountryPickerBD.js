@@ -162,7 +162,7 @@ const CountryPicker = ({ handleCountryChange, localData, country }) => {
       </div>
       <div className='row local'>
         <div className='col-md-12 my-3 py-3 text-left'>
-          <h3>সর্বশেষ তথ্য এখানে &#8594;</h3>
+          <h3>সর্বশেষ তথ্য এখানে </h3>
         </div>
         <div className='col-md-4 my-3'>
           <div className='row cases shadow align-items-center justify-content-between no-gutters'>

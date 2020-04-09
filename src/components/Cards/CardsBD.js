@@ -15,7 +15,7 @@ const Cards = ({ data }) => {
           <div className='col-md-12'>
             <div className='row justify-content-between align-items-center'>
               <div className='col-sm-6'>
-                <h3>বিশ্ব পরিসংখ্যান &#8594;</h3>
+                <h3>বিশ্ব পরিসংখ্যান</h3>
               </div>
               <div className='col-sm-6 text-sm-right'>
                 <h5 className={styles.en}>

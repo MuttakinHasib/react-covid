@@ -54,7 +54,7 @@ const Charts = ({ msg, font }) => {
 
   return (
     <div className='mt-5'>
-      <h4 className={`${font} text-secondary`}>{msg} &#8594;</h4>
+      <h4 className={`${font} text-secondary`}>{msg}</h4>
       <div>{lineChart}</div>
     </div>
   );
