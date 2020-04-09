@@ -94,7 +94,8 @@ export const fetchDaily = async () => {
       deaths: dailyData.deaths.total,
       date: dailyData.reportDate,
     }));
-    return modifiedData;
+    const lastMonth = modifiedData.slice(-30);
+    return lastMonth;
   } catch (err) {
     console.log(err);
   }
