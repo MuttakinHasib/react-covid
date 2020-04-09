@@ -240,7 +240,7 @@ const CountryPicker = ({ handleCountryChange, localData, country }) => {
                       duration={2.3}
                       separator={','}
                     />{' '}
-                    <small className='text-dark'>জন</small>
+                    <small className='text-dark'>জনের</small>
                   </Fragment>
                 ) : (
                   <small className={`${styles.en} text-primary`}>

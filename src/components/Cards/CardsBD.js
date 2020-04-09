@@ -42,7 +42,7 @@ const Cards = ({ data }) => {
                   <div className='col-3'>
                     <img
                       src={casesImg}
-                      alt='Cases'
+                      alt='&nbsp;'
                       className='img-fluid logo'
                     />
                   </div>
@@ -74,7 +74,7 @@ const Cards = ({ data }) => {
                   <div className='col-3'>
                     <img
                       src={deathsImg}
-                      alt='Deaths'
+                      alt='&nbsp;'
                       className='img-fluid logo'
                     />
                   </div>
@@ -106,7 +106,7 @@ const Cards = ({ data }) => {
                   <div className='col-3'>
                     <img
                       src={recoveredImg}
-                      alt='Recovered'
+                      alt='&nbsp;'
                       className='img-fluid logo'
                     />
                   </div>

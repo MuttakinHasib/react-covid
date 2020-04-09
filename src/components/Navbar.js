@@ -11,7 +11,7 @@ const Navbar = ({ link, nav }) => {
             className='logo'
             src={logo}
             style={{ width: '55px' }}
-            alt='logo'
+            alt='&nbsp;'
           />
           <h5 className='mb-0 font-weight-bold'>
             COVID-19 <br />
