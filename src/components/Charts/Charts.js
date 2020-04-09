@@ -19,14 +19,6 @@ const Charts = () => {
   const lineChart = dailyData?.length ? (
     <Chart
       options={{
-        title: {
-          text: 'Coronavirus around the world - last 30 days',
-          style: {
-            fontSize: '30px',
-            fontWeight: 'bold',
-            color: '#263238',
-          },
-        },
         xaxis: {
           type: 'datetime',
           categories: dailyData.map(({ date }) => date),
@@ -60,7 +52,12 @@ const Charts = () => {
     />
   ) : null;
 
-  return <div className='mt-5'>{lineChart}</div>;
+  return (
+    <div className='mt-5'>
+      <h4 className='text-secondary'>Coronavirus around the world - last 30 days :</h4>
+      <div>{lineChart}</div>
+    </div>
+  );
 };
 
 export default Charts;
