@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../images/deaths-large.png';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
-const Navbar = ({ link, nav }) => {
+const Navbar = ({ link, nav,font }) => {
   return (
     <div className='navbar sticky-top bg-white border-bottom'>
       <div className='container'>
@@ -36,7 +36,7 @@ const Navbar = ({ link, nav }) => {
             </a>
           </li>
           <li className='nav-item ml-3'>
-            <Link className='nav-link' to={link}>
+            <Link className={`${font} nav-link`} to={link}>
               <Button type='dashed'>{nav}</Button>
             </Link>
           </li>

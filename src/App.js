@@ -39,7 +39,7 @@ class App extends Component {
               path='/'
               render={props => (
                 <Fragment>
-                  <Navbar link='/en' nav='English' />
+                  <Navbar font='font-en' link='/en' nav='English' />
                   <CardsBD data={data} />
                   <div className='container'>
                     <CountryPickerBD
@@ -58,7 +58,7 @@ class App extends Component {
               path='/en'
               render={props => (
                 <Fragment>
-                  <Navbar link='/' nav='Bangla' />
+                  <Navbar font='font-bd' link='/' nav='বাংলা' />
                   <Cards data={data} />
                   <div className='container'>
                     <CountryPicker

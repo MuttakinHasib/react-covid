@@ -1,21 +1,19 @@
-import { NovelCovid } from 'novelcovid';
+// import { NovelCovid } from 'novelcovid';
 import axios from 'axios';
 
-const api = new NovelCovid();
-const url = ' https://covid19.mathdro.id/api';
+// const api = new NovelCovid();
+const api = 'https://corona.lmao.ninja/v2';
+const url = 'https://covid19.mathdro.id/api';
 
 // Global Data
 
 export const fetchDate = async () => {
+  const text = await axios.get(`https://corona.lmao.ninja/v2/countries/bd`);
+  console.log(text);
   try {
     const {
-      cases,
-      todayCases,
-      recovered,
-      deaths,
-      todayDeaths,
-      updated,
-    } = await api.all();
+      data: { cases, todayCases, recovered, deaths, todayDeaths, updated },
+    } = await axios.get(`${api}/all`);
 
     const modifiedData = {
       cases,
@@ -40,16 +38,18 @@ export const fetchLocalCountry = async countryName => {
   }
   try {
     const {
-      country,
-      countryInfo,
-      cases,
-      todayCases,
-      recovered,
-      deaths,
-      todayDeaths,
-      critical,
-      updated,
-    } = await api.countries(selectCountry);
+      data: {
+        country,
+        countryInfo,
+        cases,
+        todayCases,
+        recovered,
+        deaths,
+        todayDeaths,
+        critical,
+        updated,
+      },
+    } = await axios.get(`${api}/countries/${selectCountry}`);
 
     const modifiedData = {
       country,
@@ -73,11 +73,11 @@ export const fetchLocalCountry = async countryName => {
 
 export const fetchCountryData = async () => {
   try {
-    const res = await api.countries();
-    return res.map(data => ({
-      country: data.country,
-      code: data.countryInfo.iso2,
-      flag: data.countryInfo.flag,
+    const { data } = await axios.get(`${api}/countries`);
+    return data.map(info => ({
+      country: info.country,
+      code: info.countryInfo.iso2,
+      flag: info.countryInfo.flag,
     }));
   } catch (err) {
     console.log(err);

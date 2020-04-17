@@ -15,7 +15,7 @@ const Charts = ({ msg, font }) => {
         <Spinner />
       </div>
     );
-  const date = dailyData.map(({ date }) => date);
+
   const lineChart = dailyData?.length ? (
     <Chart
       options={{
